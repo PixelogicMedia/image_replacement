@@ -23,7 +23,7 @@ def handle_files(file_name, patch_dir, base_files, destination_dir):
                 os.remove(destination_file_path)
             os.link(file_path, destination_file_path)
 
-def create_folder_c(base_tiff, patch_tiff, destination_parent):
+def create_new_folder(base_tiff, patch_tiff, destination_parent):
     current_time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     destination_folder = os.path.join(destination_parent, current_time)
     
@@ -61,4 +61,4 @@ Base_TIFF_Location = "./testfolders/BaseTIFF"
 Patch_TIFF_Location = "./testfolders/PatchTIFF"
 New_Folder_Location = "./testfolders"
 
-create_folder_c(Base_TIFF_Location, Patch_TIFF_Location, New_Folder_Location)
+create_new_folder(Base_TIFF_Location, Patch_TIFF_Location, New_Folder_Location)
